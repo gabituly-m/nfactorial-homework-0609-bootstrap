@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tom | BOOT&JQUERY</title>
+    <!-- Icon -->
+    <link rel="icon"
+          href="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Video-Game-Controller-Icon-IDV-green.svg/1024px-Video-Game-Controller-Icon-IDV-green.svg.png">
+    <!-- Bootstrap -->
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <!-- Own CSS -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+         referrerpolicy="no-referrer"></script>
+    <!-- Own JS -->
+    <script src="./index.js" defer></script>
+</head>
+<body>
+
+<nav class="navbar bg-primary text-light">
+    <div class="container d-flex justify-content-center p-4">
+        <h1><span>nFactorial | TOM THOMB</span></h1>
+    </div>
+</nav>
+<main class="h-70 d-flex align-items-center flex-column flex-md-row">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2 col-12 d-flex justify-content-center border-end py-5">
+                <aside class="d-flex align-items-center justify-content-center h-70 py-md-5">
+                    <ul class="list-group flex-row flex-wrap flex-md-column list-unstyled py-md-5 ">
+                        <li><a class="goHome list-group-item list-group-item-action py-3 active" href="#">Home</a></li>
+                        <li><a class="goLibs list-group-item list-group-item-action py-3" href="#">Mad Libs</a></li>
+                        <li><a class="goThumb list-group-item list-group-item-action py-3" href="#">Tom Thumb</a></li>
+                    </ul>
+                </aside>
+            </div>
+            <div class="col-md-10 col-12 d-flex justify-content-center">
+                <section class="game w-85 h-100 d-flex align-items-center justify-content-center">
+
+                    <div class="home d-flex align-items-center justify-content-center flex-column py-5 my-5">
+                        <h1 class="mb-5 text-center">Hello, World!</h1>
+                        <video src="./home.mp4" autoplay loop muted class="w-50"></video>
+                    </div>
+
+                    <div class="libs d-flex align-items-center justify-content-center flex-column py-md-5 my-md-5">
+                        <h1 class="mb-5 text-center">Mad Libs</h1>
+                        <form class="border p-4 mb-5">
+                            <label for="name">Type Name:</label>
+                            <input id="name" class="form-control mb-4" type="text" required>
+
+                            <label for="character">Character:</label>
+                            <input id="character" class="form-control mb-4" type="text" required>
+
+                            <label for="adverb">Adverb:</label>
+                            <input id="adverb" class="form-control mb-4" type="text" required>
+
+                            <label for="adjective">Adjective:</label>
+                            <input id="adjective" class="form-control mb-4" type="text" required>
+
+                            <button class="btn btn-primary" type="submit">Story</button>
+                        </form>
+                        <div class="story w-75 py-4">
+                            <h3 class="text-center">One crazy story for you.</h3>
+                            <p>
+                                One day, my friend <b><span class="name"></span></b> was visiting New York and ran into
+                                <b><span class="character"></span></b>. <b><span class="name"></span></b> ran <b><span
+                                    class="adverb"></span></b> to meet
+                                <b><span class="character"></span></b>. But <b><span class="character"></span></b> turned out to be
+                                very
+                                <b><span class="adjective"></span></b> and <b><span class="name"></span></b> did not enjoy the
+                                meeting.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="thumb d-flex align-items-center justify-content-center flex-column py-md-4 my-md-4">
+                        <h1 class="mb-4 text-center">Tom Thumb</h1>
+                        <form class="border p-3 mb-4">
+                            <label for="width">Image width (px):</label>
+                            <input id="width" class="form-control mb-3" type="number" required min="1">
+
+                            <label for="height">Image height (px):</label>
+                            <input id="height" class="form-control mb-3" type="number" required min="1">
+
+                            <label for="colors">Number of colors:</label>
+                            <input id="colors" class="form-control mb-3" type="number" required min="1">
+
+                            <button class="btn btn-primary">Calculate File size</button>
+                        </form>
+                        <div class="calculation w-75 py-3">
+                            <h3 class="text-center">File size</h3>
+                            <p>
+                                File is <span class="size"></span> KB which is <span class="isOk"></span>
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</main>
+<footer class="p-4 bg-primary">
+    <div class="container">
+        <div class="row justify-content-between align-items-center flex-wrap">
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

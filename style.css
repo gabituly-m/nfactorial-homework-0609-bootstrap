@@ -1,0 +1,25 @@
+body{
+    min-height: 100vh;
+}
+
+.partners img{
+    width: 10%;
+}
+
+.hide{
+    display: none !important;
+}
+
+main .row > *:nth-child(1){
+    min-height: 100vh;
+}
+
+:is(.calculation, .story) p{
+    text-align: center;
+}
+
+@media screen and (max-width: 768px){
+    main .row > *:nth-child(1){
+        min-height: unset;
+    }
+}
